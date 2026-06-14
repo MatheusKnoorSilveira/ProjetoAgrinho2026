@@ -1,0 +1,250 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS (Estilo Base WWF)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+:root {
+    --wwf-dark: #111111;
+    /* Preto quase puro para títulos e fundo do menu */
+    --wwf-green: #006432;
+    /* Verde floresta institucional */
+    --wwf-accent: #FF9900;
+    /* Laranja vibrante para destaques e links */
+    --light-bg: #F4F7F5;
+    /* Cinza claro esverdeado para seções alternadas */
+    --text-color: #333333;
+    /* Cinza escuro para leitura confortável */
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E MENU (Navegação Limpa)
+   ========================================================================== */
+header {
+    background-color: var(--wwf-dark);
+    color: #ffffff;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 4px solid var(--wwf-green);
+}
+
+header .logo h1 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--wwf-accent);
+}
+
+/* ==========================================================================
+   3. SEÇÕES DE CONTEÚDO (Visual de Alto Impacto)
+   ========================================================================== */
+section {
+    padding: 80px 8%;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: var(--wwf-dark);
+    margin-bottom: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+section p {
+    font-size: 1.15rem;
+    color: #444444;
+    max-width: 850px;
+    margin-bottom: 20px;
+}
+
+/* Seção Hero (Banner Principal com Imagem de Natureza) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(17, 17, 17, 0.85)),
+        url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 140px 8%;
+}
+
+.hero h2 {
+    color: #ffffff;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #e0e0e0;
+    margin: 0 auto;
+    font-size: 1.3rem;
+}
+
+/* Seção Tecnologia (Grid de Cards) */
+#tecnologia {
+    background-color: #ffffff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: var(--light-bg);
+    padding: 35px;
+    border-radius: 0px;
+    /* Bordas retas trazem o visual sério e institucional da WWF */
+    border-top: 6px solid var(--wwf-green);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--wwf-dark);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* Seção Sustentabilidade (Lista em Grade) */
+#sustentabilidade {
+    background-color: var(--light-bg);
+}
+
+#sustentabilidade ul {
+    list-style: none;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+#sustentabilidade ul li {
+    background: #ffffff;
+    padding: 25px;
+    border-left: 5px solid var(--wwf-accent);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    font-size: 1.05rem;
+}
+
+/* Seção Futuro */
+#futuro {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#futuro p {
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   4. RODAPÉ (Footer Técnico e Organizado)
+   ========================================================================== */
+footer {
+    background-color: var(--wwf-dark);
+    color: #b0b0b0;
+    padding: 60px 8% 40px 8%;
+    font-size: 0.95rem;
+    border-top: 6px solid var(--wwf-accent);
+}
+
+.footer-conteudo {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 25px;
+}
+
+.footer-conteudo p {
+    margin-bottom: 8px;
+}
+
+.footer-fontes h4 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-fontes ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.footer-fontes ul li {
+    line-height: 1.4;
+}
+
+.footer-fontes ul li strong {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   5. RESPONSIVIDADE (Ajustes para Celular)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
